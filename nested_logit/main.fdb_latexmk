@@ -1,0 +1,21 @@
+# Fdb version 4
+["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0 -1
+  "main.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "main.pdf"
+  (rewritten before read)
+["xelatex"] 1715078736 "d:/Latex_folder/nested_logit/main.tex" "main.xdv" "main" 1715078736 2
+  "c:/Users/entre/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls" 1678028348 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
+  "c:/Users/entre/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size12.clo" 1678028348 8449 c314623021fbddd0180c05345324933c ""
+  "c:/Users/entre/AppData/Roaming/TinyTeX/texmf-dist/web2c/texmf.cnf" 1678028349 40171 cdab547de63d26590bebb3baff566530 ""
+  "c:/Users/entre/AppData/Roaming/TinyTeX/texmf-var/web2c/xetex/xelatex.fmt" 1678028350 8714484 9d83b66aa7724e239e2989aa748b4884 ""
+  "c:/Users/entre/AppData/Roaming/TinyTeX/texmf.cnf" 1678028367 956 3c30d803d50a80731379075439bae0c7 ""
+  "d:/Latex_folder/nested_logit/main.tex" 1715074453 21110 8517af30903c520200189578a826a674 ""
+  "diagbox.sty" 0 -1 0 ""
+  "main.aux" 1715078736 34 3985256e7290058c681f74d7a3565a19 "xelatex"
+  "main.tex" 1715074453 21110 8517af30903c520200189578a826a674 ""
+  (generated)
+  "main.aux"
+  "main.log"
+  "main.xdv"
+  (rewritten before read)

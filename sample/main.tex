@@ -1,0 +1,18 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}
+\usepackage{fontspec} 
+\setCJKmainfont{NotoSerifTC-Regular.otf}
+\XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt     %這兩行一定要加，中文才能自動換行
+\defaultCJKfontfeatures{AutoFakeBold=6,AutoFakeSlant=.4} %以後不用再設定粗斜
+\newCJKfontfamily\Kai{標楷體}       %定義指令\Kai則切換成標楷體
+\newCJKfontfamily\Hei{微軟正黑體}   %定義指令\Hei則切換成正黑體
+\newCJKfontfamily\NewMing{新細明體} %定義指令\NewMing則切換成新細明體
+\title{\LaTeX Test Document}
+\author{Nobody}
+\begin{document}
+\maketitle
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+\input{chapter1.tex}
+\end{document}

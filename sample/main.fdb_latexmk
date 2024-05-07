@@ -1,0 +1,39 @@
+# Fdb version 4
+["xdvipdfmx"] 1715088407.24761 "main.xdv" "main.pdf" "main" 1715088407.57811 0
+  "main.xdv" 1715088407 11932 e2e4ea2a828acbdca76e29956080f2e5 "xelatex"
+  (generated)
+  "main.pdf"
+  (rewritten before read)
+["xelatex"] 1715088406.46148 "d:/Latex_folder/sample/main.tex" "main.xdv" "main" 1715088407.57723 0
+  "C:/Users/entre/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1715085522 37564624 31d9fbee382401b488028c5e32672290 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1705273579 20144 147463a6a579f4597269ef9565205cfe ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1705273578 5119 a04a8b68ab4f6ce800a41f7f8012a10e ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1705273578 8449 f07039d8e4e89f21078d9b5137579bfc ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd" 1705273578 2430 fce77d7e103eb98b6c4d486ae1d466c0 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/cjk/CJKfntef.sty" 1670582841 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/ctex/ctexhook.sty" 1657818410 6505 33157acfddefdd8fd513e2308e07a435 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-xetex.sty" 1714736602 164918 787e2ae8c4c349a1dcc7ed289af79c33 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg" 1714736602 549 c4adac819276241fea8eb79c5ab7b99e ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty" 1714736602 3755 9c1ce51f4d1e6a66449f44b5c92ef111 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-xetex.def" 1714423267 31593 8c3ca3b4ad881d265b6cb2e2e6db3e7d ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1714423873 6565 5adfba02f2f76cda4051952f7358a326 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1710413257 9327 5639c769ba7d5bb81b757ffe41c01cb5 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xtemplate/xtemplate-2023-10-10.sty" 1710413257 49753 715423f8c411773dc3698602d0fb87ba ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xtemplate/xtemplate.sty" 1710413257 1174 a8cd1527a0b30ca2f6810848a66fa643 ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
+  "chapter1.tex" 1715084282 772 d2f4aaf74f0178392895762b94a167d9 ""
+  "d:/Latex_folder/sample/main.tex" 1715088405 1322 917355ed56c41b05050c31b7cdc1751d ""
+  "main.aux" 1715088407 129 29b0c3809b21c8a31a74990d35f6e4c5 "xelatex"
+  "main.tex" 1715088405 1322 917355ed56c41b05050c31b7cdc1751d ""
+  (generated)
+  "main.aux"
+  "main.log"
+  "main.xdv"
+  (rewritten before read)
