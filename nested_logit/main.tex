@@ -13,7 +13,16 @@
 \usepackage[rightcaption]{sidecap}
 \usepackage{caption}
 \usepackage{fontspec}
+\usepackage{amsthm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+
 \setCJKmainfont{NotoSerifTC-Regular.otf} %自行去 google font 下載該字型
 \XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
 \XeTeXlinebreakskip = 0pt plus 1pt     %這兩行一定要加，中文才能自動換行
@@ -35,7 +44,7 @@ Email address: entrencemania@gmail.com
 \maketitle
 \begin{spacing}{0}
 \begin{abstract}\noindent
-我們探討了 nested logit model 在推薦系統上的應用。我們透過隨機效用模型與 nested logit distribution 將消費者與商品的關係建模，在有限的廣告欄位下決定商品的組合並推播給消費者以最大化消費者的點籍機率。並且我們推導出此模型有一個 closed-form solution，並提供與之對應的演算法。
+我們探討了 nested logit model 在推薦系統上的應用。我們透過隨機效用模型與 nested logit distribution 將消費者點擊商品是為一隨機事件，藉由消費者對於不同商品的喜好程度而調整，在有限的廣告欄位下決定商品的組合並推播給消費者以最大化消費者的點籍機率。並且我們推導出此模型有一個 closed-form solution，並提供與之對應的演算法。
 \end{abstract}
 \end{spacing}
 \begin{tabular}{rl}
@@ -48,10 +57,117 @@ Email address: entrencemania@gmail.com
 
 
 \section{Introduction}
+隨機效用模型一直以來都是推薦系統中的重要模型之一，透過隨機效用模型我們可以將消費者與商品的關係建模，並且透過此模型我們可以推導出消費者對於商品的偏好，而其中以 logit model 最廣為人知，並且衍伸出處理3個以上選擇的 multilogit model，logit family 的優勢在於其機率易於計算，並且能搭配回歸模型使用。McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是將 logit model 推廣到更一般的形式，而 nested logit model 是 GEV distribution 的一個特例，其特點在於可以處理商品間的相關性，推薦系統中此相關性假設尤為重要，設想在4個廣告欄位中分別投放了:螢幕、顯示卡、鍵盤、耳機四則廣告，此種投放策略能提升想要購買科技產品之消費者的點擊率，但是當下沒有科技產品購買意願的消費者就沒有充分的誘因點擊，此種投放策略就是沒有考慮到這四種商品之間的高度相關性。\\
+\indent Nested logit model 就是建立在此種情況下的模型，其特點在於可以處理商品間的相關性，透過將商品分群 (clustered)，使得商品間的相關性更為明顯，進而提升推薦系統的效果。\\
 
 \section{Related Literature}
 
+\section{Fundamental Concepts}
+\subsection{Random Utility Model}
+離散選擇是計量經濟學描繪消費者行為的一個重要方法，其中隨機效用模型允許消費者在選擇商品時有一定的隨機性，這種隨機性可以解釋消費者在同一個選擇集合中選擇不同商品的原因，假設代表性消費者對於兩商品 $i \in \{1, 2\}$ 的效用分別為
+\begin{align*}
+    &U_{1} = V_{1} + \epsilon_{1},\\
+    &U_{2} = V_{2} + \epsilon_{2}, \qquad (\epsilon_{1}, \epsilon_{2})^T \sim ((0,0)^T, \Sigma).
+\end{align*}
+其中 $U_{i}$ 代表消費者對於商品 i 的效用，$V_{i}$ 代表商品 i 的固定效用，$(\epsilon_{i}, \epsilon_{j})$ 服從一期望值為0之聯合分布，將消費者的選擇以 dependent variable y 表示，則消費者選擇商品1的機率為
+\begin{align*}
+    P(y=1) &= P(U_{1} > U_{2}) = P(\epsilon_{1} - \epsilon_{2} > V_{2} - V_{1}) \\ 
+    &= \int_{\epsilon_{1} - \epsilon_{2} > V_{2} - V_{1}} f(\epsilon_{1}, \epsilon_{2}) d\epsilon_{1} d\epsilon_{2}.
+\end{align*}
+
+\subsection{Logit Model}
+當我們假設 $(\epsilon_{1}, \epsilon_{2}) \overset{\mathrm{iid}}{\sim} \text{type-I Generalized Extreme Value Distribution}$，則此模型會退化為 logit model，消費者選擇商品1的機率為
+\begin{align*}
+    P(y=1) &= \frac{e^{V_{1}}}{e^{V_{1}} + e^{V_{2}}}.
+\end{align*}
+當我們假設 $V_2=0$ 時也就是將 i=2 解釋為不購買商品，則此模型會退化為 binary logit model，消費者選擇商品1的機率為
+\begin{align*}
+    P(y=1) &= \frac{e^{V_{1}}}{e^{V_{1}} + 1}.
+\end{align*}
+此外若將商品數量推廣為 n 種，$(\epsilon_{1}, \epsilon_{2}, ..., \epsilon_{n}) \overset{\mathrm{iid}}{\sim} \text{type-I Generalized Extreme Value Distribution}$則此模型會退化為 multinomial logit model，消費者選擇商品 i 的機率為
+\begin{align*}
+    P(y = i) &= P(U_i \geq U_k), \quad \forall k \in \{1, 2, ...,n\}\\
+    &= \frac{e^{V_{i}}}{\sum_{k=1}^{n} e^{V_{k}}}.
+\end{align*}
+
+\subsection{Generalized Extreme Value Model}
+McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是將 logit model 推廣到更一般的形式，此分布的優勢在於應用在隨機效用模型時其選擇機率易於計算，只要隨機效用 $(\epsilon_{1}, \epsilon_{2}, ..., \epsilon_{n})$ 之聯合累積分布函數符合以下性質
+\begin{equation}
+    F(\epsilon_{1}, \epsilon_{2}, ..., \epsilon_{n}) = \exp[-G(e^{-\epsilon_{1}}, e^{-\epsilon_{2}}, ..., e^{-\epsilon_{n}})],
+\end{equation}
+其中滿足 aggregate function $G(y_1, y_2, ..., y_n)$ 的充要條件為
+\begin{enumerate}
+    \item Nonnegativity
+    \item Homogeneity of degree 1
+    \item Mixed partial derivatives are continuous and nonpositive for even oreder and nonnegativity for odd order
+    \item  $G(y_1, y_2, ..., y_n) \rightarrow \infty$ \text{when} $y_i \rightarrow \infty$
+\end{enumerate}
+則此模型的選擇機率為
+\begin{align}\label{eqn:the property of GEV model}
+    &P(y=i) = e^{V_{i}}\frac{G_i(e^{-V_1},e^{-V_2},...e^{-V_n})}{G(e^{-V_1},e^{-V_2},...e^{-V_n})},\\
+    &G_i(y_1, y_2, ..., y_n) := \frac{\partial G(y_1, y_2, ..., y_n)}{\partial y_i}. \nonumber
+\end{align}
+當選定 $G(y_1, y_2, ..., y_n)=\sum_{j=1}^{n} y_j$ 為 aggregate function 時，此模型會退化為 multinomial logit model
+\begin{align*}
+    P(y=i) &= e^{V_{i}}\frac{G_i(e^{-V_1},e^{-V_2},...e^{-V_n})}{G(e^{-V_1},e^{-V_2},...e^{-V_n})}\\
+    &= \frac{e^{V_{i}}}{\sum_{k=1}^{n} e^{V_{k}}}.
+\end{align*}
+\subsection{Nested Logit Model}
+傳統的 logit model 假設不同商品間的隨機效用是獨立的，但在真實世界中這是一個不合理的假設，因此我們允許同一種類的商品間有相關性但不同種類的商品間依然互相獨立，e.g. 同樣是科技產品的螢幕、顯示卡、鍵盤、耳機的隨機效用具有相關性，但是科技產品的螢幕與食品的巧克力是互相獨立的。\newline
+\indent 假設所有的商品被分為 M 個類別，第 m 群的商品數量為 $N_m$，在不失一般性的情況下，假設 $N_1 = N_2 = ... = N_M = N$，此時消費者的選擇 $y \in \textbf{R}^2$ (i.e. y = (i,j) 為消費者選擇第 i 類別中的第 j 項商品)。使用 GEV model 來建構符合此場景的模型就是 nested logit model，其定義與性質如下:
+
+\begin{definition}[Nested logit model]
+    Under random utility model, if the joint cumulative distribution function of $(\epsilon_{1,1}, \epsilon_{1,2}, ..., \epsilon_{M,N})$ satisfies
+    \begin{align*}
+        &F(\epsilon_{1,1}, \epsilon_{1,2}, ..., \epsilon_{M,N})\\
+        &=\exp[-G(e^{-\epsilon_{1,1}}, e^{-\epsilon_{1,2}}, ..., e^{-\epsilon_{M,N}})]\\
+        &=\exp\{-\sum_{m=1}^{M}[\sum_{n=1}^{N}\exp(-\frac{\epsilon_{m,n}}{\tau_m})]^{\tau_m}\},
+    \end{align*}
+    this model is called nested logit model. \\
+    The parameters $\tau_m$ are called dissimilarity parameters which are required to satisfy $0 \leq \tau_m \leq 1$ for all $m=1,2,...,M$.
+\end{definition}
+
+\begin{prop}[Probability of nested logit model]\label{prop:1}
+    Under nested logit model, the probability of consumer choosing item (i,j) is
+    \begin{align*}
+        P(y=(i,j)) &= \frac{e^\frac{{V_{i,j}}}{\tau_i}}{\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i}} \frac{(\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i})^{\tau_i}}{\sum_{m=1}^{M}(\sum_{n=1}^{N} e^\frac{{V_{m,n}}}{\tau_m})^{\tau_m}},
+    \end{align*}
+    this proposition can be proved by equation \ref{eqn:the property of GEV model}.
+\end{prop}
+
+\begin{prop}[Evaluation of probability]\label{prop:2}
+    Directly from proposition \ref{prop:1}, 
+    \begin{align*}
+        P(y=(i,j)) 
+        &= \frac{e^\frac{{V_{i,j}}}{\tau_i}}{\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i}} \frac{(\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i})^{\tau_i}}{\sum_{m=1}^{M}(\sum_{n=1}^{N} e^\frac{{V_{m,n}}}{\tau_m})^{\tau_m}}\\
+        &= P(y=(i,j) \mid y=(i,*))P(y=(i,*)),
+    \end{align*}
+    the first fraction is the conditional probability of choosing item (i,j) given that the consumer chooses category i, and the second fraction is the probability of choosing category i.
+\end{prop}
+
+
+
+\begin{prop}[Covariance and correlation of nested logit model]\label{prop:3}
+    Under nested logit model, the covariance and corelation of random utility of \textbf{different} items (i,j) and (k,l) are
+    \begin{align*}
+        Cov(\epsilon_{i,j}, \epsilon_{k,l}) = 
+        \begin{cases}
+            \frac{\pi^2}{6}(1-\tau_i^2), & \text{if i=k} \\
+            0, & \text{otherwise}
+        \end{cases}
+    \end{align*}
+
+    \begin{align*}
+        Cor(\epsilon_{i,j}, \epsilon_{k,l}) =
+        \begin{cases}
+            1-\tau_i^2, & \text{if i=k} \\
+            0, & \text{otherwise}
+        \end{cases}
+    \end{align*}
+\end{prop}
+
 \section{Methodologies}
+
 
 \section{Analysis}
 
