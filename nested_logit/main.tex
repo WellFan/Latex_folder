@@ -15,6 +15,7 @@
 \usepackage{fontspec}
 \usepackage{amsthm}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -22,6 +23,13 @@
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}[theorem]{Proposition}
+
+
+\newcommand{\matr}[1]{\mathbf{#1}} % undergraduate algebra version
+%\newcommand{\matr}[1]{#1}          % pure math version
+%\newcommand{\matr}[1]{\bm{#1}}     % ISO complying version
+
+
 
 \setCJKmainfont{NotoSerifTC-Regular.otf} %自行去 google font 下載該字型
 \XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
@@ -42,9 +50,10 @@ Email address: entrencemania@gmail.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
+\begin{sloppypar}
 \begin{spacing}{0}
-\begin{abstract}\noindent
-我們探討了 nested logit model 在推薦系統上的應用。我們透過隨機效用模型與 nested logit distribution 將消費者點擊商品是為一隨機事件，藉由消費者對於不同商品的喜好程度而調整，在有限的廣告欄位下決定商品的組合並推播給消費者以最大化消費者的點籍機率。並且我們推導出此模型有一個 closed-form solution，並提供與之對應的演算法。
+\begin{abstract}
+\noindent 我們探討了 nested logit model 在推薦系統上的應用。我們透過隨機效用模型與 nested logit distribution 將消費者點擊商品是為一隨機事件，藉由消費者對於不同商品的喜好程度而調整，在有限的廣告欄位下決定商品的組合並推播給消費者以最大化消費者的點籍機率。並且我們推導出此模型有一個 closed-form solution，並提供與之對應的演算法。
 \end{abstract}
 \end{spacing}
 \begin{tabular}{rl}
@@ -57,7 +66,7 @@ Email address: entrencemania@gmail.com
 
 
 \section{Introduction}
-隨機效用模型一直以來都是推薦系統中的重要模型之一，透過隨機效用模型我們可以將消費者與商品的關係建模，並且透過此模型我們可以推導出消費者對於商品的偏好，而其中以 logit model 最廣為人知，並且衍伸出處理3個以上選擇的 multilogit model，logit family 的優勢在於其機率易於計算，並且能搭配回歸模型使用。McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是將 logit model 推廣到更一般的形式，而 nested logit model 是 GEV distribution 的一個特例，其特點在於可以處理商品間的相關性，推薦系統中此相關性假設尤為重要，設想在4個廣告欄位中分別投放了:螢幕、顯示卡、鍵盤、耳機四則廣告，此種投放策略能提升想要購買科技產品之消費者的點擊率，但是當下沒有科技產品購買意願的消費者就沒有充分的誘因點擊，此種投放策略就是沒有考慮到這四種商品之間的高度相關性。\\
+隨機效用模型一直以來都是推薦系統中的重要模型之一，透過隨機效用模型我們可以將消費者與商品的關係建模，並且透過此模型我們可以推導出消費者對於商品的偏好，而其中以 logit model 最廣為人知，並且衍伸出處理3個以上選擇的 multilogit model，logit family 的優勢在於其機率易於計算，並且能搭配回歸模型使用。McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是將 logit model 推廣到更一般的形式，而 nested logit model 是 GEV distribution 的一個特例，其特點在於可以處理商品間的相關性，推薦系統中此相關性假設尤為重要，設想在4個廣告欄位中分別投放了:螢幕、顯示卡、鍵盤、耳機四則廣告，此種投放策略能提升想要購買科技產品之消費者的點擊率，但是當下沒有科技產品購買意願的消費者就沒有充分的誘因點擊，此種投放策略就是沒有考慮到這四種商品之間的高度相關性。
 \indent Nested logit model 就是建立在此種情況下的模型，其特點在於可以處理商品間的相關性，透過將商品分群 (clustered)，使得商品間的相關性更為明顯，進而提升推薦系統的效果。\\
 
 \section{Related Literature}
@@ -84,6 +93,7 @@ Email address: entrencemania@gmail.com
 \begin{align*}
     P(y=1) &= \frac{e^{V_{1}}}{e^{V_{1}} + 1}.
 \end{align*}
+
 此外若將商品數量推廣為 n 種，$(\epsilon_{1}, \epsilon_{2}, ..., \epsilon_{n}) \overset{\mathrm{iid}}{\sim} \text{type-I Generalized Extreme Value Distribution}$則此模型會退化為 multinomial logit model，消費者選擇商品 i 的機率為
 \begin{align*}
     P(y = i) &= P(U_i \geq U_k), \quad \forall k \in \{1, 2, ...,n\}\\
@@ -167,9 +177,201 @@ McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是�
 \end{prop}
 
 \section{Methodologies}
+Suppose there are M nests each have N alternatives, the benefit of nested logit model is that the decision is decomposed into two steps: first, the consumer chooses a nest, then the consumer chooses an alternative within the chosen nest. In the scenario of recommendation system, the consumer clicks on an ad instead of buying a product. Moreover, the consumer can choose not to click on any ad, which can also be considered as a kind of ad. The "not-click" ad is a special case which is the only choice in the not-click nest. Let 0'th nest be the not-click nest, the utility of consumer click on any of these ads is 
+
+\begin{equation}\label{eq: utility}
+    U_{i,j} = 
+    \begin{cases}
+        V_{i,j} + \epsilon_{i,j}, &\text{click j'th ad of i'th nest} \\
+        V_0 + \epsilon_0, &\text{not click any ad}.     
+    \end{cases}
+\end{equation}
+
+\indent Notice that we only observe the choice of consumer, but not the utility of consumer. Which means equation \ref{eq: utility} cannot be identified. A common way to solve this problem is to shift the whole model by substracting $V_0$ (i.e. let $\tilde{U}_{i,j} = U_{i,j} - V_0$).
+For readability, we will omit the tilde in the following discussion. Instead of model \ref{eq: utility} we discuss the following model:
+
+\begin{equation}\label{eq: utility2}
+    U_{i,j} = 
+    \begin{cases}
+        V_{i,j} + \epsilon_{i,j}, &\text{click j'th ad of i'th nest} \\
+        \epsilon_0, &\text{not click any ad}.     
+    \end{cases}
+\end{equation}
+
+Another issue is indentification of the dissimilarity parameter $\tau_i$. Heiss(2002) finds out if a nest contains only one alternative, the dissimilarity parameter of this nest cannot be indentified. In this case, only not-click nest is affected. The solution is rather simple, we set $\tau_0=1$.
+
+\indent Combining the discussion above, the probability of consumer click on ad (i,j) is
+
+\begin{equation}
+    P(y=(i,j)) 
+        = \frac{e^\frac{{V_{i,j}}}{\tau_i}}{\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i}} \frac{(\sum_{n=1}^{N} e^\frac{{V_{i,n}}}{\tau_i})^{\tau_i}}{1+\sum_{m=1}^{M}(\sum_{n=1}^{N} e^\frac{{V_{m,n}}}{\tau_m})^{\tau_m}},
+\end{equation}
+
+and the probability of consumer not click on any ad is
+
+\begin{equation}
+    P(y=(0,0)) 
+        = \frac{1}{1+\sum_{m=1}^{M}(\sum_{n=1}^{N} e^\frac{{V_{m,n}}}{\tau_m})^{\tau_m}}.
+\end{equation}
+
+The third issue is that the consumer only views limited number of ads, which means the consumer can only choose from a subset of all ads. Therefore, we define the set of ads that the consumer can choose from as an exposure matrix $\matr{S} \in \mathbf{R}^{M \times N}$.
+
+\begin{definition}[Exposure Matrix]\label{exposure matrix}
+    $\matr{S} \in \mathbf{R}^{M \times N}$ is the exposure matrix if and only if
+    \begin{equation*}
+        \matr{S_{i,j}} = 
+            \begin{cases}
+            1, & \text{if ad (i,j) is exposed to consumer} \\
+            0, & \text{otherwise}.
+            \end{cases}
+    \end{equation*}
+\end{definition}
+
+Futhermore, let $\matr{s_i} \in \mathbf{R}^{N}$ denote the exposure vector that the consumer can choose from nest i. The relation between $\matr{S}$ and $\matr{s_i}$ is that $\matr{s_i} = \matr{S}^T \matr{e_i}$, where $\matr{e_i} \in \mathbf{R}^{M}$ is a vector with 1 at i-th position and 0 elsewhere.
+
+\indent In the following sections, we will discuss several cases from simple to complex. The first case is that the consumer as an all-knowing being, which means the consumer can observe any number of ads at ease. The second case is that the consumer is a normal being, and the exposure constaint is that the consumer can obeserve limited number of ads per nest. The third case is about the substitute effect within ads. We will discuss the effect of another one ad being exposed to the consumer and the impact on the probability of consumer click on the original ad. The fourth case is about the more familiar case, the consumer can only observe limited number of ads in total. 
+% The fifth case is about the effect of the number of ads being exposed to the consumer. The last case is about the effect of the number of nests being exposed to the consumer. 
+
+\subsection{Case 1: All-knowing Consumer}
+\indent The goal is to maximize the probability of consumer click on any ad. In other words, we aim to minimize the probability of consumer not click on any ad. The optimization problem is
+
+\begin{align}
+    \text{Objective funtion:} &\qquad \min_{\matr{S}} P(y=(0,0)) \nonumber \\
+    &= \frac{1}{1+\sum_{m=1}^{M}(\sum_{n=1}^{N} \matr{S_{m,n}}e^\frac{{V_{m,n}}}{\tau_m})^{\tau_m}}
+\end{align}
+
+To achieve notation simplicity, we define $\matr{H} \in \mathbf{R}^{M \times N}$ as the exponent utility matrix.
+\begin{definition}[Exponent Utility Matrix]\label{exponent}
+    $\matr{H} \in \mathbf{R}^{M \times N}$ is the exponent utility matrix if and only if 
+    \begin{equation*}
+        \matr{H_{i,j}} = e^\frac{{V_{i,j}}}{\tau_i}.
+    \end{equation*}
+\end{definition}
+Similarly, we define $\matr{h_i} \in \mathbf{R}^{N}$ as the exponent utility vector of nest i. The relation between $\matr{H}$ and $\matr{h_i}$ is that $\matr{h_i} = \matr{H}^T \matr{e_i}$.
+Therefore we can rewrite the optimization problem as
+\begin{align}
+    \text{Objective funtion:} &\qquad \min_{\matr{S}} P(y=(0,0)) \nonumber \\
+    &= \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}}
+\end{align}
+The optimal solution $\matr{S}^*$ is
+\begin{align}\label{optimal}
+    \matr{S}^* &= \arg\min_{\matr{S}} P(y=(0,0)) = \arg\min_{\matr{S}} \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}} \nonumber \\
+    &= \arg\max_{\matr{S}} \sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}.
+\end{align}
+Since the components of exponent utility vector $\matr{h_m}$ are all positive combing with the fact that the components of exposure vector $\matr{s_m}$ are all binary, the optimal solution should be that the all-knowing consumer exposed to all ads to achieve the maximum probability of consumer click on any ad
+\begin{equation}
+    \matr{S^*_{i,j}} = 1, \quad \forall i \in \{1,2,...,M\}, j \in \{1,2,...,N\}.
+\end{equation}
+
+\subsection{Case 2: Limited Exposure in each Nest}
+Case 2 is case 1 with the exposure consraint. The problem can be written as
+\begin{align} \label{case2}
+    \text{Objective funtion:} \qquad &\min_{\matr{S}} P(y=(0,0)) = \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}},\nonumber \\
+    \text{Subject to:} \qquad &\sum_{n=1}^{N}\matr{s_{m,n}} \leq K, \quad \forall m \in \{1,2,...,M\},\\ &\text{where K is some integer less than N}. \nonumber
+\end{align}
+Case 1 implies that the inner solution (i.e. $\sum_{n=1}^{N}\matr{s_{m,n}} < K$) never be the optimal. Hence we focus on the bounded solution specticular. The optimal solution is rather simple as well.
+Without loss of generality, we can reorder the components of $\matr{H}$ such that $\matr{H_{m,1}} \geq \matr{H_{m,2}} \geq ... \geq \matr{H_{m,N}}, \quad \forall m \in \{1,2,...,M\}$. The optimal solution is
+\begin{equation}
+    \matr{S^*_{m,n}} = 
+    \begin{cases}
+        1, & \text{if n $\leq$ K} \\
+        0, & \text{otherwise}.
+    \end{cases}
+\end{equation}
+The intepratation is that the consumer should be exposed to the K highest exponent utility ads in each nest.
+
+\subsection{Case 3: Substitute Effect}
+Here we discuss the effect of another one ad being exposed to the consumer and the impact on the probability of consumer click on the original ad. We difine the the substitute effect of ad (o,p) on ad (i,j) as
+\begin{definition}[Substitute Effect]
+    \begin{equation*}
+        \mathrm{SE}[(o,p) \rightarrow (i,j)] = P(y=(i,j) \mid \matr{S_{o,p}}=1) - P(y=(i,j) \mid \matr{S_{o,p}}=0).
+    \end{equation*}
+\end{definition}
+
+The substitute effect can be calculated by the following formula 
+\begin{align*}
+    &P(y=(i,j) \mid \matr{S_{o,p}}=0) =  \frac{\matr{H_{i,j}}}
+    {\matr{h_i}^T \matr{s_i}} \frac{(\matr{h_i}^T \matr{s_i})^{\tau_i}}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}}\\
+    &P(y=(i,j) \mid \matr{S_{o,p}} = 1)=
+    \begin{cases}
+        \frac{\matr{H_{i,j}}}
+        {\matr{h_i}^T \matr{s_i}} \frac{(\matr{h_i}^T \matr{s_i})^{\tau_i}}{1+\sum
+        \limits_{m=1, m \neq o}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}+(\matr{h_o}^T \matr{s_o}+\matr{H_{o,p}})^{\tau_o}}, &\quad o \neq i,\\
+        \frac{\matr{H_{i,j}}}
+        {\matr{h_i}^T \matr{s_i}+\matr{H_{o,p}}} \frac{(\matr{h_i}^T \matr{s_i}+\matr{H_{o,p}})^{\tau_i}}{1+\sum\limits_{m=1, m \neq o}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}+(\matr{h_o}^T \matr{s_o}+\matr{H_{o,p}})^{\tau_o}}, &\quad o = i.
+    \end{cases}
+\end{align*}
+Assume $\matr{H_{o,p}}$ is rather small, the first order Taylor expansion \\ 
+of $P(y=(i,j) \mid \matr{S_{o,p}} = 1)$ at $\matr{H_{o,p}}=0$ is
+\begin{align}\label{p proun}
+    &P(y=(i,j) \mid \matr{S_{o,p}} = 1) \approx
+    \begin{cases}
+        P(y=(i,j) \mid \matr{S_{o,p}} = 0)[1-\frac{\matr{H_{o,p}}}{\matr{h_o}^T \matr{s_o}}\frac{\tau_o(\matr{h_o}^T \matr{s_o})^{\tau_o}}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}}], &o \neq i,\\
+        %P(y=(i,j) \mid \matr{S_{o,p}} = 0)[1-\frac{\matr{H_{o,p}}}{\matr{h_o}^T \matr{s_o}}(1-\frac{\tau_o(1+\sum\limits_{m=1, m \neq o}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m})}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}})], &\quad o = i.
+        P(y=(i,j) \mid \matr{S_{o,p}} = 0)[1-\frac{\matr{H_{o,p}}}{\matr{h_o}^T \matr{s_o}}(\frac{\tau_o(\matr{h_o}^T\matr{s_o})^{\tau_o}}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}}+(1-\tau_o))], &o = i.
+    \end{cases}
+\end{align}
+
+From equation \ref{p proun}, we can derive the substitute effect of ad (o,p) on ad (i,j) as
+\begin{equation}\label{se}
+\begin{aligned}
+    \mathrm{SE}[(o,p) \rightarrow (i,j)] &= P(y=(i,j) \mid \matr{S_{o,p}}=1) - P(y=(i,j) \mid \matr{S_{o,p}}=0)  \\
+    &\approx 
+    \begin{cases}
+        -P(y=(i,j) \mid \matr{S_{o,p}} = 0)\frac{\matr{H_{o,p}}}{\matr{h_o}^T \matr{s_o}}\frac{\tau_o(\matr{h_o}^T \matr{s_o})^{\tau_o}}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}}, &o \neq i,\\
+        -P(y=(i,j) \mid \matr{S_{o,p}} = 0)\frac{\matr{H_{o,p}}}{\matr{h_o}^T \matr{s_o}}[\frac{\tau_o(\matr{h_o}^T\matr{s_o})^{\tau_o}}{1+\sum_{m=1}^{M} (\matr{h_m}^T\matr{s_m})^{\tau_m}}+(1-\tau_o)], &o = i.
+    \end{cases}
+\end{aligned}
+\end{equation}
+
+The result is actually intuitive. First, the substitute effect of ad (o,p) on ad (i,j) is negative in both cases, which means that the probability of consumer click on ad (i,j) decreases when another ad is exposed to the consumer. This makes sense because in the nested logit model, all the ads are substitutes to each other with respect to probability. Second, the magnitude of substitute effect is larger( $1-\tau_o$ term in equation \ref{se}) when the old ad shares the same nest with the new ad. This is reasonable because the ads in the same nest are more similar to each other, which means the consumer is more likely to substitute the new ad with the old one. For example, the substitute effect of a new iPhone ad on a Samsung mobile ad is larger than the substitute effect of a new iPhone ad on a cereal ad due to the fact that iPhone and Samsung mobile are both in the smartphone category but cereal isn't.
+
+\subsection{Case 4: Limited Exposure in Total}
+Case 3 is case 1 with a different exposure consraint. The problem can be written as
+\begin{align} \label{case4}
+    \text{Objective funtion:} \qquad &\min_{\matr{S}} P(y=(0,0)) = \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}},\nonumber \\
+    \text{Subject to:} \qquad &\sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S_{m,n}} \leq K, \quad \text{where K is some integer less than M*N}.
+\end{align}
+
+The consraint can be written as $\sum_{m=1}^{M}\matr{s_m}^T\matr{s_m} \leq K,$ which seems like the nostalgia L2 regularization in machine learning. The difference is that the L2 regularization is a continuous constraint while the constraint in random utility problem is a discrete constraint. This kind of problem is called the knapsack problem in combinatorial optimization and it is NP-hard in general. Nonetheless, in our setting the optimal solution $\matr{S}^*$ is P-hard. \\
+\indent In the first step, sort components of each row of $\matr{H}$ in descending order i.e. $\matr{H_{m,1}} \geq \matr{H_{m,2}} \geq ... \geq \matr{H_{m,N}}, \quad \forall m \in \{1,2,...,M\}$. To proceed further, we need the following lemma.
 
 
-\section{Analysis}
+\begin{lemma}[Monotonicity of Choice]\label{lemma1}
+    $\matr{S^*}$ is the optimal solution. If $\matr{S^*_{i,j}} = 1$, then
+    \begin{equation*}
+        \matr{S^*_{i,j-1}} = 1
+    \end{equation*}
+\end{lemma}
+
+\begin{proof}
+    The proof is by contradiction. Suppose $\matr{S^*_{i,j-1}} = 0$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 0$ and $\matr{S'_{i,j-1}} = 1$. Since the objective function is the same as case 1, we can rewrite the objective function as 
+    \begin{equation*}
+        \text{Alternative Objective funtion:} \qquad \max_{\matr{S}} \sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}.
+    \end{equation*}
+    The difference between alternative value functions achieved by $\matr{S'}$ and $\matr{S^*}$ is
+    \begin{equation*}
+    \begin{aligned}
+        &\quad \sum_{m=1}^{M}(\matr{h_m}^T \matr{s'_m})^{\tau_m} - \sum_{m=1}^{M}(\matr{h_m}^T \matr{s^*_m})^{\tau_m} \\
+        &= (\matr{h_i}^T \matr{s'_i})^{\tau_i} - (\matr{h_i}^T \matr{s^*_i})^{\tau_i} \\
+        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S'_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j}})^{\tau_i}\\
+        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j}})^{\tau_i}> 0.
+    \end{aligned}
+    \end{equation*}
+    Therefore, the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^*}$, which contradicts the assumption that $\matr{S^*}$ is the optimal solution.
+\end{proof}
+
+
+\begin{lemma}[Bounded Constraint]\label{lemma2}
+    Optimal solution $\matr{S^*}$ always satisfies the bounded constraint i.e.
+    \begin{equation*}
+        \sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^*_{m,n}} = K.
+    \end{equation*}
+\end{lemma}
+\begin{proof}
+    This is proof by contradiction. Suppose $\sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^*_{m,n}} < K$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 1$ where $\matr{S^*_{i,j}} = 0$. Using the alternative objective function in lemma \ref{lemma1}, we can show that the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^*}$, which contradicts the assumption that $\matr{S^*}$ is the optimal solution.
+\end{proof}
+
 
 \section{Conclusion}
 
@@ -184,5 +386,5 @@ McFadden (1978) 提出 generalized extreme value (GEV) distribution，也就是�
 \end{thebibliography}
 
 
-
+\end{sloppypar}
 \end{document}
