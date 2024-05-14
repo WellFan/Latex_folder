@@ -1,16 +1,17 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1715530448.13738 -1
-  "main.bcf" 1715530447 107992 1372e320b8e132f38eb5706b82283cc8 "xelatex"
+["biber main"] 1715673924.76661 "main.bcf" "main.bbl" "main" 1715674061.61017 0
+  "main.bcf" 1715674061 109604 25f62ac636a66209f7f890d3ef94997f "xelatex"
+  "reference.bib" 1715673921 3546 1891f69b699ad452f280c5605823aab0 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1715530447.73868 "main.xdv" "main.pdf" "main" 1715530448.13914 0
-  "main.xdv" 1715530447 148236 ff2e9f7f19421c7d2212df593c4e3c2a "xelatex"
+["xdvipdfmx"] 1715674061.22866 "main.xdv" "main.pdf" "main" 1715674061.61326 0
+  "main.xdv" 1715674061 259884 ec802b4c4b53c6f3fdedd2c9c04251cc "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1715530446.24874 "d:/Latex_folder/nested_logit/main.tex" "main.xdv" "main" 1715530448.1375 0
+["xelatex"] 1715674059.37346 "d:/Latex_folder/nested_logit/main.tex" "main.xdv" "main" 1715674061.61034 0
   "C:/Users/entre/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1715085522 37564624 31d9fbee382401b488028c5e32672290 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -51,7 +52,7 @@
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty" 1705273578 5319 2b738d02ce36ada6dcdd9534940db0ee ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1705273578 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd" 1705273578 2430 fce77d7e103eb98b6c4d486ae1d466c0 ""
-  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bbx" 1711466047 1818 9ed166ac0a9204a8ebe450ca09db5dde ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/authoryear.bbx" 1711466047 8024 f170876981d3e1db9ed0abd5abc62dbe ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.bbx" 1711466047 25680 409c3f3d570418bc545e8065bebd0688 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg" 1711466047 69 249fa6df04d948e51b6d5c67bea30c42 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def" 1711466047 96838 228f189cb4020ea9f6d467af8aa859c2 ""
@@ -60,7 +61,7 @@
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def" 1711466047 13919 5426dbe90e723f089052b4e908b56ef9 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def" 1711466047 32761 18d14e3b502c120f79b2184de4e21d14 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.def" 1711466047 3786 1f89d14780f0ad89ab94652b37f4e9b8 ""
-  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cbx" 1711466047 4629 cda468e8a0b1cfa0f61872e171037a4b ""
+  "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/authoryear.cbx" 1711466047 3976 2d46354b304f9bc8fda915fe9215de04 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx" 1711466047 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -103,11 +104,11 @@
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "d:/Latex_folder/nested_logit/main.tex" 1715530445 26404 46125ef7e58ba1dc0c34d2e9136df0ca ""
-  "main.aux" 1715530447 2212 f78f81e14e1ab5074dbc52754c5ad15b "xelatex"
-  "main.bbl" 1715345774 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.run.xml" 1715530447 2259 b1c8d8f7c96ff4a62c8e6cdfc8d6c31e "xelatex"
-  "main.tex" 1715530445 26404 46125ef7e58ba1dc0c34d2e9136df0ca ""
+  "d:/Latex_folder/nested_logit/main.tex" 1715674058 34874 4a7cbe9adac669b6bd10ae2fb68f07db ""
+  "main.aux" 1715674061 4829 bab667b3e61b2d700dd1b8ae15b84553 "xelatex"
+  "main.bbl" 1715673927 20493 cbca7df692f9e6c35109642ef76de203 "biber main"
+  "main.run.xml" 1715674061 2345 bb64b4e8f923aed92431bc42fa687363 "xelatex"
+  "main.tex" 1715674058 34874 4a7cbe9adac669b6bd10ae2fb68f07db ""
   (generated)
   "main.aux"
   "main.bcf"

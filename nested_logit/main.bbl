@@ -1,0 +1,488 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{borsch1990}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e1c8c303b93477f1538414a1c0cdd4f3}{%
+           family={Börsch-Supan},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{fullhash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{fullhashraw}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{bibnamehash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{authorbibnamehash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{authornamehash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{authorfullhash}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \strng{authorfullhashraw}{e1c8c303b93477f1538414a1c0cdd4f3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{3}
+      \field{title}{On the compatibility of nested logit models with utility maximization}
+      \field{volume}{43}
+      \field{year}{1990}
+      \field{pages}{373\bibrangedash 388}
+      \range{pages}{16}
+    \endentry
+    \entry{davis2014}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d4a7d5e2359e53a3f7d16966f333226}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=253706c922e85eb9b42b65fad6bfea0d}{%
+           family={Gallego},
+           familyi={G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e3111d36e0ec1fd26e1a353663fb813}{%
+           family={Topaloglu},
+           familyi={T\bibinitperiod},
+           given={Huseyin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{fullhash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{fullhashraw}{483210ce91bc5bcce828e6838e066f17}
+      \strng{bibnamehash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{authorbibnamehash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{authornamehash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{authorfullhash}{483210ce91bc5bcce828e6838e066f17}
+      \strng{authorfullhashraw}{483210ce91bc5bcce828e6838e066f17}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research}
+      \field{number}{2}
+      \field{title}{Assortment optimization under variants of the nested logit model}
+      \field{volume}{62}
+      \field{year}{2014}
+      \field{pages}{250\bibrangedash 273}
+      \range{pages}{24}
+    \endentry
+    \entry{gallego2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=253706c922e85eb9b42b65fad6bfea0d}{%
+           family={Gallego},
+           familyi={G\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e3111d36e0ec1fd26e1a353663fb813}{%
+           family={Topaloglu},
+           familyi={T\bibinitperiod},
+           given={Huseyin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{fullhash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{fullhashraw}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{bibnamehash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{authorbibnamehash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{authornamehash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{authorfullhash}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \strng{authorfullhashraw}{c9690529fd1ba9c613cd89f7ae14ad51}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management Science}
+      \field{number}{10}
+      \field{title}{Constrained assortment optimization for the nested logit model}
+      \field{volume}{60}
+      \field{year}{2014}
+      \field{pages}{2583\bibrangedash 2601}
+      \range{pages}{19}
+    \endentry
+    \entry{garey1990}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3d981c215c9c575d31bcca98c6d6c69d}{%
+           family={Garey},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f805225d8e433c29a18a566d1f6acc6}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima S},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Freeman}%
+      }
+      \strng{namehash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{fullhash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{fullhashraw}{823444737741d756dc02464e8d6ef4dd}
+      \strng{bibnamehash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{authorbibnamehash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{authornamehash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{authorfullhash}{823444737741d756dc02464e8d6ef4dd}
+      \strng{authorfullhashraw}{823444737741d756dc02464e8d6ef4dd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and intractability}
+      \field{title}{A Guide to the Theory of NP-Completeness}
+      \field{year}{1990}
+      \field{pages}{37\bibrangedash 79}
+      \range{pages}{43}
+    \endentry
+    \entry{hausman1978}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=efa8edfd650dfd234af154959e067af8}{%
+           family={Hausman},
+           familyi={H\bibinitperiod},
+           given={Jerry\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \strng{bibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorbibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authornamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica: Journal of the econometric society}
+      \field{title}{Specification tests in econometrics}
+      \field{year}{1978}
+      \field{pages}{1251\bibrangedash 1271}
+      \range{pages}{21}
+    \endentry
+    \entry{heiss}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3eeb4a5a1c5fdd5b0d399cef996d9727}{%
+           family={Heiss},
+           familyi={H\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{fullhash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{fullhashraw}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{bibnamehash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{authorbibnamehash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{authornamehash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{authorfullhash}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \strng{authorfullhashraw}{3eeb4a5a1c5fdd5b0d399cef996d9727}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Stata Journal}
+      \field{number}{3}
+      \field{title}{Structural choice analysis with nested logit models}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{pages}{227\bibrangedash 252}
+      \range{pages}{26}
+    \endentry
+    \entry{hensher2002}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fb8ce2f90600eb0cccb30d0cac0b3be4}{%
+           family={Hensher},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6aeaa164d917d0657b4f141378594e78}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={William\bibnamedelima H},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{fullhash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{fullhashraw}{9338b2d23c373f7e56927a9548720e23}
+      \strng{bibnamehash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{authorbibnamehash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{authornamehash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{authorfullhash}{9338b2d23c373f7e56927a9548720e23}
+      \strng{authorfullhashraw}{9338b2d23c373f7e56927a9548720e23}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Part B: Methodological}
+      \field{number}{1}
+      \field{title}{Specification and estimation of the nested logit model: alternative normalisations}
+      \field{volume}{36}
+      \field{year}{2002}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
+    \entry{mcfadden1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1327829299e572b76be93fafcdca8d7b}{%
+           family={McFadden},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{fullhash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{fullhashraw}{1327829299e572b76be93fafcdca8d7b}
+      \strng{bibnamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorbibnamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authornamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorfullhash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorfullhashraw}{1327829299e572b76be93fafcdca8d7b}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Conditional logit analysis of qualitative choice behavior}
+      \field{year}{1972}
+    \endentry
+    \entry{mcfadden1977}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1327829299e572b76be93fafcdca8d7b}{%
+           family={McFadden},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{fullhash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{fullhashraw}{1327829299e572b76be93fafcdca8d7b}
+      \strng{bibnamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorbibnamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authornamehash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorfullhash}{1327829299e572b76be93fafcdca8d7b}
+      \strng{authorfullhashraw}{1327829299e572b76be93fafcdca8d7b}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modelling the choice of residential location}
+      \field{year}{1977}
+    \endentry
+    \entry{rusmevichientong2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9f6a993540c69aa6887464d78101130f}{%
+           family={Rusmevichientong},
+           familyi={R\bibinitperiod},
+           given={Paat},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1533960168df1877d6773a6b69bd0846}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Zuo-Jun\bibnamedelima Max},
+           giveni={Z\bibinithyphendelim J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6465ae9462ff5d959973dae65c9faaa2}{%
+           family={Shmoys},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima B},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{fullhash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{fullhashraw}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{bibnamehash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{authorbibnamehash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{authornamehash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{authorfullhash}{a9478ffccea5f8302cd20b72db1348f1}
+      \strng{authorfullhashraw}{a9478ffccea5f8302cd20b72db1348f1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research Letters}
+      \field{number}{4}
+      \field{title}{A PTAS for capacitated sum-of-ratios optimization}
+      \field{volume}{37}
+      \field{year}{2009}
+      \field{pages}{230\bibrangedash 238}
+      \range{pages}{9}
+    \endentry
+    \entry{train}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bb49649475647614b53241e5cdccd584}{%
+           family={Train},
+           familyi={T\bibinitperiod},
+           given={Kenneth\bibnamedelima E},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{bb49649475647614b53241e5cdccd584}
+      \strng{fullhash}{bb49649475647614b53241e5cdccd584}
+      \strng{fullhashraw}{bb49649475647614b53241e5cdccd584}
+      \strng{bibnamehash}{bb49649475647614b53241e5cdccd584}
+      \strng{authorbibnamehash}{bb49649475647614b53241e5cdccd584}
+      \strng{authornamehash}{bb49649475647614b53241e5cdccd584}
+      \strng{authorfullhash}{bb49649475647614b53241e5cdccd584}
+      \strng{authorfullhashraw}{bb49649475647614b53241e5cdccd584}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Discrete choice methods with simulation}
+      \field{year}{2002}
+    \endentry
+    \entry{vovsha}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6320092b4b79fd2f8c3a8fa070785597}{%
+           family={Vovsha},
+           familyi={V\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{fullhash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{fullhashraw}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{bibnamehash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{authorbibnamehash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{authornamehash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{authorfullhash}{6320092b4b79fd2f8c3a8fa070785597}
+      \strng{authorfullhashraw}{6320092b4b79fd2f8c3a8fa070785597}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Record}
+      \field{number}{1}
+      \field{title}{Application of cross-nested logit model to mode choice in Tel Aviv, Israel, metropolitan area}
+      \field{volume}{1607}
+      \field{year}{1997}
+      \field{pages}{6\bibrangedash 15}
+      \range{pages}{10}
+    \endentry
+    \entry{williams1977}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=15df70c29a869f5d87077d27b8e1794b}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Huw\bibnamedelima CWL},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{fullhash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{fullhashraw}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{bibnamehash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{authorbibnamehash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{authornamehash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{authorfullhash}{15df70c29a869f5d87077d27b8e1794b}
+      \strng{authorfullhashraw}{15df70c29a869f5d87077d27b8e1794b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environment and planning A}
+      \field{number}{3}
+      \field{title}{On the formation of travel demand models and economic evaluation measures of user benefit}
+      \field{volume}{9}
+      \field{year}{1977}
+      \field{pages}{285\bibrangedash 344}
+      \range{pages}{60}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
