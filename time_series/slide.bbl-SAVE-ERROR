@@ -1,0 +1,59 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{almaskati2022oil}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bf586773b0eb708a257a4e1d5f7ebb98}{%
+           family={Almaskati},
+           familyi={A\bibinitperiod},
+           given={Nawaf},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{fullhash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{fullhashraw}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{bibnamehash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{authorbibnamehash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{authornamehash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{authorfullhash}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \strng{authorfullhashraw}{bf586773b0eb708a257a4e1d5f7ebb98}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Emerging Markets Finance and Trade}
+      \field{number}{8}
+      \field{title}{Oil, foreign exchange swaps and interest rates in the GCC countries}
+      \field{volume}{58}
+      \field{year}{2022}
+      \field{pages}{2388\bibrangedash 2406}
+      \range{pages}{19}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

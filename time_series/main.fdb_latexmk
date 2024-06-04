@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1717507187.5352 "main.bcf" "main.bbl" "main" 1717507193.31839 0
-  "main.bcf" 1717507192 109053 b03217a7d8825ac193aec3dc33b0dd04 "xelatex"
+["biber main"] 1717516993.92852 "main.bcf" "main.bbl" "main" 1717527075.33131 0
+  "main.bcf" 1717527074 109124 c0c531c455f99a70dbd58aaf359dfa9f "xelatex"
   "reference.bib" 1715805051 1890 e5e286c1a20621e6d169d213114af66c ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1717507192.99881 "main.xdv" "main.pdf" "main" 1717507193.32087 0
-  "main.xdv" 1717507192 163356 eb1dd3775f444e9c7f17143b3e1a2713 "xelatex"
+["xdvipdfmx"] 1717527074.98287 "main.xdv" "main.pdf" "main" 1717527075.33418 0
+  "main.xdv" 1717527074 165568 c07018f2a4f7387ec400b93ff790b567 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1717507191.51456 "d:/Latex_folder/time_series/main.tex" "main.xdv" "main" 1717507193.31853 0
+["xelatex"] 1717527073.32947 "d:/Latex_folder/time_series/main.tex" "main.xdv" "main" 1717527075.33146 0
   "C:/Users/entre/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1715085522 37564624 31d9fbee382401b488028c5e32672290 ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -105,11 +105,11 @@
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/entre/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "d:/Latex_folder/time_series/main.tex" 1717507185 20242 4e2232d99a90cbe6017b6e2ed27e8a45 ""
-  "main.aux" 1717507192 2970 5474ff7bd74888e14ddda30b49fa60a0 "xelatex"
-  "main.bbl" 1717507189 11238 51b78be0b8a233ee62bd09b6efb82ba7 "biber main"
-  "main.run.xml" 1717507192 2345 bb64b4e8f923aed92431bc42fa687363 "xelatex"
-  "main.tex" 1717507185 20242 4e2232d99a90cbe6017b6e2ed27e8a45 ""
+  "d:/Latex_folder/time_series/main.tex" 1717527072 20460 23083248dd6ef4cfa75bf528229155e0 ""
+  "main.aux" 1717527074 3075 ae19f218eef66ab77484e6da34a5ab19 "xelatex"
+  "main.bbl" 1717516996 11238 51b78be0b8a233ee62bd09b6efb82ba7 "biber main"
+  "main.run.xml" 1717527074 2345 bb64b4e8f923aed92431bc42fa687363 "xelatex"
+  "main.tex" 1717527072 20460 23083248dd6ef4cfa75bf528229155e0 ""
   (generated)
   "main.aux"
   "main.bcf"

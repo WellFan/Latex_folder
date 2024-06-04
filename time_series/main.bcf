@@ -2380,6 +2380,7 @@
     <bcf:citekey order="5" intorder="1">reboredo2014oil</bcf:citekey>
     <bcf:citekey order="6" intorder="1">eslamloueyan2015determinants</bcf:citekey>
     <bcf:citekey order="7" intorder="1">almaskati2022wavelet</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">almaskati2022oil</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
