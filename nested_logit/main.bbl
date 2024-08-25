@@ -19,6 +19,62 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{DBLP:journals/corr/abs-1907-13286}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=89965f95d54051bc0d471e6b6b5d4cfd}{%
+           family={Abdollahpouri},
+           familyi={A\bibinitperiod},
+           given={Himan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4412c93756d0d4935bc40fbe7e60e0b2}{%
+           family={Mansoury},
+           familyi={M\bibinitperiod},
+           given={Masoud},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=927ab4206ced595b50d2ac5fb4535b88}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc49a49df190f326623d1fb6fb125301}{%
+           family={Mobasher},
+           familyi={M\bibinitperiod},
+           given={Bamshad},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{64424df5e9a72251e87149a031807279}
+      \strng{fullhash}{8aebd669f4a4d071313b86864b759a8a}
+      \strng{fullhashraw}{8aebd669f4a4d071313b86864b759a8a}
+      \strng{bibnamehash}{64424df5e9a72251e87149a031807279}
+      \strng{authorbibnamehash}{64424df5e9a72251e87149a031807279}
+      \strng{authornamehash}{64424df5e9a72251e87149a031807279}
+      \strng{authorfullhash}{8aebd669f4a4d071313b86864b759a8a}
+      \strng{authorfullhashraw}{8aebd669f4a4d071313b86864b759a8a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{The Unfairness of Popularity Bias in Recommendation}
+      \field{volume}{abs/1907.13286}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1907.13286
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1907.13286
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1907.13286
+      \endverb
+    \endentry
     \entry{borsch1990}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e1c8c303b93477f1538414a1c0cdd4f3}{%
@@ -285,6 +341,76 @@
       \field{pages}{1\bibrangedash 17}
       \range{pages}{17}
     \endentry
+    \entry{5731f882-9c11-372e-a87e-2f3238e61d42}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e3c7f4cd361e86d3c2831ce7e4875270}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jong\bibnamedelima Woo},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc1ac021c8e7198db9bcc436adbb6629}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Byung\bibnamedelima Hun},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ae1cb92cde2edef4463119800d288af}{%
+           family={Shaw},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfe36d1bf282fa39ca1489b5f0129441}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Hsin-Lu},
+           giveni={H\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea3b3bb0df6a9c4b98d0c04a98e00be4}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis, Ltd.}%
+      }
+      \strng{namehash}{be6d7e1eee775818b93bc3747ecf517c}
+      \strng{fullhash}{198a04a0368a14cdda9ad815dd53cf45}
+      \strng{fullhashraw}{198a04a0368a14cdda9ad815dd53cf45}
+      \strng{bibnamehash}{be6d7e1eee775818b93bc3747ecf517c}
+      \strng{authorbibnamehash}{be6d7e1eee775818b93bc3747ecf517c}
+      \strng{authornamehash}{be6d7e1eee775818b93bc3747ecf517c}
+      \strng{authorfullhash}{198a04a0368a14cdda9ad815dd53cf45}
+      \strng{authorfullhashraw}{198a04a0368a14cdda9ad815dd53cf45}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Customization and personalization services are a critical success factor for Internet stores and Web service providers. This paper studies personalized recommendation techniques that suggest products or services to the customers of Internet storefronts based on their demographics or past purchasing behavior. The underlining theories of recommendation techniques are statistics, data mining, artificial intelligence, and rule-based matching. In the rule-based approach to personalized recommendation, marketing rules for personalization are usually obtained from marketing experts and used to perform inferencing based on customer data. However, it is difficult to extract marketing rules from marketing experts, and to validate and maintain the constructed knowledge base. This paper proposes a marketing rule-extraction technique for personalized recommendation on Internet storefronts using machine learning techniques, and especially decision-tree induction techniques. Using tree induction techniques, data-mining tools can generate marketing rules that match customer demographics to product categories. The extracted rules provide personalized advertisement selection when a customer visits an Internet store. An experiment is performed to evaluate the effectiveness of the proposed approach with preference scoring and random selection.}
+      \field{issn}{10864415, 15579301}
+      \field{journaltitle}{International Journal of Electronic Commerce}
+      \field{number}{3}
+      \field{title}{Application of Decision-Tree Induction Techniques to Personalized Advertisements on Internet Storefronts}
+      \field{urlday}{24}
+      \field{urlmonth}{8}
+      \field{urlyear}{2024}
+      \field{volume}{5}
+      \field{year}{2001}
+      \field{urldateera}{ce}
+      \field{pages}{45\bibrangedash 62}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/27750981
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/27750981
+      \endverb
+    \endentry
     \entry{mcfadden1972}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1327829299e572b76be93fafcdca8d7b}{%
@@ -339,6 +465,72 @@
       \field{title}{Modelling the choice of residential location}
       \field{year}{1977}
     \endentry
+    \entry{10.1145/2365952.2365962}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9203dc724f298030e81ba470feb309af}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Marco\bibnamedelima Tulio},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71b3483c4b98b0420ec8cb24f7b4ad60}{%
+           family={Lacerda},
+           familyi={L\bibinitperiod},
+           given={Anisio},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=889e830561e2b6d53c8650bfb2906c3a}{%
+           family={Veloso},
+           familyi={V\bibinitperiod},
+           given={Adriano},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bfead6e28af8682351e159c297ea9d04}{%
+           family={Ziviani},
+           familyi={Z\bibinitperiod},
+           given={Nivio},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Dublin, Ireland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{62dda78fe1497685b6e2c1e1adb1ed32}
+      \strng{fullhash}{2540970062af9280a83f69d645e3509d}
+      \strng{fullhashraw}{2540970062af9280a83f69d645e3509d}
+      \strng{bibnamehash}{62dda78fe1497685b6e2c1e1adb1ed32}
+      \strng{authorbibnamehash}{62dda78fe1497685b6e2c1e1adb1ed32}
+      \strng{authornamehash}{62dda78fe1497685b6e2c1e1adb1ed32}
+      \strng{authorfullhash}{2540970062af9280a83f69d645e3509d}
+      \strng{authorfullhashraw}{2540970062af9280a83f69d645e3509d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Performing accurate suggestions is an objective of paramount importance for effective recommender systems. Other important and increasingly evident objectives are novelty and diversity, which are achieved by recommender systems that are able to suggest diversified items not easily discovered by the users. Different recommendation algorithms have particular strengths and weaknesses when it comes to each of these objectives, motivating the construction of hybrid approaches. However, most of these approaches only focus on optimizing accuracy, with no regard for novelty and diversity. The problem of combining recommendation algorithms grows significantly harder when multiple objectives are considered simultaneously. For instance, devising multi-objective recommender systems that suggest items that are simultaneously accurate, novel and diversified may lead to a conflicting-objective problem, where the attempt to improve an objective further may result in worsening other competing objectives. In this paper we propose a hybrid recommendation approach that combines existing algorithms which differ in their level of accuracy, novelty and diversity. We employ an evolutionary search for hybrids following the Strength Pareto approach, which isolates hybrids that are not dominated by others (i.e., the so called Pareto frontier). Experimental results on two recommendation scenarios show that: (i) we can combine recommendation algorithms in order to improve an objective without significantly hurting other objectives, and (ii) we allow for adjusting the compromise between accuracy, diversity and novelty, so that the recommendation emphasis can be adjusted dynamically according to the needs of different users.}
+      \field{booktitle}{Proceedings of the Sixth ACM Conference on Recommender Systems}
+      \field{isbn}{9781450312707}
+      \field{series}{RecSys '12}
+      \field{title}{Pareto-efficient hybridization for multi-objective recommender systems}
+      \field{year}{2012}
+      \field{pages}{19\bibrangedash 26}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/2365952.2365962
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2365952.2365962
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2365952.2365962
+      \endverb
+      \keyw{pareto-optimality,novelty,hybridization,diversity}
+    \endentry
     \entry{rusmevichientong2009}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=9f6a993540c69aa6887464d78101130f}{%
@@ -385,6 +577,158 @@
       \field{pages}{230\bibrangedash 238}
       \range{pages}{9}
     \endentry
+    \entry{1574231873785747328}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=994177b9f3af3ef7888f9b65090ebefe}{%
+           family={SALTON},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{fullhash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{fullhashraw}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{bibnamehash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{authorbibnamehash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{authornamehash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{authorfullhash}{994177b9f3af3ef7888f9b65090ebefe}
+      \strng{authorfullhashraw}{994177b9f3af3ef7888f9b65090ebefe}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{McGraw-Hill}
+      \field{title}{Introduction to modern information retrieval}
+      \field{year}{1983}
+      \verb{urlraw}
+      \verb https://cir.nii.ac.jp/crid/1574231873785747328
+      \endverb
+      \verb{url}
+      \verb https://cir.nii.ac.jp/crid/1574231873785747328
+      \endverb
+    \endentry
+    \entry{10.1145/1772690.1772780}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3df682c6c389f843e47078ef5b4610c0}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rodrygo\bibnamedelima L.T.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abb0872ff1e8610455b7c9bfd5f440e3}{%
+           family={Macdonald},
+           familyi={M\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9333f8879aa3ef9dc142dfaa2f77edbe}{%
+           family={Ounis},
+           familyi={O\bibinitperiod},
+           given={Iadh},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Raleigh, North Carolina, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{f7512b548429596214faf1295d77c707}
+      \strng{fullhash}{f7512b548429596214faf1295d77c707}
+      \strng{fullhashraw}{f7512b548429596214faf1295d77c707}
+      \strng{bibnamehash}{f7512b548429596214faf1295d77c707}
+      \strng{authorbibnamehash}{f7512b548429596214faf1295d77c707}
+      \strng{authornamehash}{f7512b548429596214faf1295d77c707}
+      \strng{authorfullhash}{f7512b548429596214faf1295d77c707}
+      \strng{authorfullhashraw}{f7512b548429596214faf1295d77c707}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When a Web user's underlying information need is not clearly specified from the initial query, an effective approach is to diversify the results retrieved for this query. In this paper, we introduce a novel probabilistic framework for Web search result diversification, which explicitly accounts for the various aspects associated to an underspecified query. In particular, we diversify a document ranking by estimating how well a given document satisfies each uncovered aspect and the extent to which different aspects are satisfied by the ranking as a whole. We thoroughly evaluate our framework in the context of the diversity task of the TREC 2009 Web track. Moreover, we exploit query reformulations provided by three major Web search engines (WSEs) as a means to uncover different query aspects. The results attest the effectiveness of our framework when compared to state-of-the-art diversification approaches in the literature. Additionally, by simulating an upper-bound query reformulation mechanism from official TREC data, we draw useful insights regarding the effectiveness of the query reformulations generated by the different WSEs in promoting diversity.}
+      \field{booktitle}{Proceedings of the 19th International Conference on World Wide Web}
+      \field{isbn}{9781605587998}
+      \field{series}{WWW '10}
+      \field{title}{Exploiting query reformulations for web search result diversification}
+      \field{year}{2010}
+      \field{pages}{881\bibrangedash 890}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/1772690.1772780
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1772690.1772780
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1772690.1772780
+      \endverb
+      \keyw{diversity,relevance,web search}
+    \endentry
+    \entry{10.1007/3-540-44593-5_25}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ccbc3ce6a6d463b4a755eac0e057f7f5}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc4a6eb94ccc8e852830923e6c896409}{%
+           family={McClave},
+           familyi={M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=92a14ac89f93c224dc339aaaa178fd94}{%
+           family={Aha},
+           familyi={A\bibinitperiod},
+           given={David\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=5dcab082ad3f13c7b1af8618b9dfe341}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{fullhash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{fullhashraw}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{bibnamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authorbibnamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authornamehash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authorfullhash}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{authorfullhashraw}{a8cc4debad031b18e04dfaa189b72c4e}
+      \strng{editorbibnamehash}{3ffeece6c0f32cf6b37f48db6ccd9cfc}
+      \strng{editornamehash}{3ffeece6c0f32cf6b37f48db6ccd9cfc}
+      \strng{editorfullhash}{3ffeece6c0f32cf6b37f48db6ccd9cfc}
+      \strng{editorfullhashraw}{3ffeece6c0f32cf6b37f48db6ccd9cfc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Case-based reasoning systems usually accept the conventional similarity assumption during retrieval, preferring to retrieve a set of cases that are maximally similar to the target problem. While we accept that this works well in many domains, we suggest that in others it is misplaced. In particular, we argue that often diversity can be as important as similarity. This is especially true in case-based recommender systems. In this paper we propose and evaluate strategies for improving retrieval diversity in CBR systems without compromising similarity or efficiency.}
+      \field{booktitle}{Case-Based Reasoning Research and Development}
+      \field{isbn}{978-3-540-44593-7}
+      \field{title}{Similarity vs. Diversity}
+      \field{year}{2001}
+      \field{pages}{347\bibrangedash 361}
+      \range{pages}{15}
+    \endentry
     \entry{train}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=bb49649475647614b53241e5cdccd584}{%
@@ -413,6 +757,72 @@
       \field{labeltitlesource}{title}
       \field{title}{Discrete choice methods with simulation}
       \field{year}{2002}
+    \endentry
+    \entry{10.1145/2645710.2645743}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2b0b0330837ee8b12b27a1fa51d1bedd}{%
+           family={Vargas},
+           familyi={V\bibinitperiod},
+           given={Saúl},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ef7dd2efd526493951ed30120da31b6}{%
+           family={Baltrunas},
+           familyi={B\bibinitperiod},
+           given={Linas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34b0daf756776ac58e5af9a2b2cdb9ee}{%
+           family={Karatzoglou},
+           familyi={K\bibinitperiod},
+           given={Alexandros},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27f68737cb3395ff156325e510de28c0}{%
+           family={Castells},
+           familyi={C\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Foster City, Silicon Valley, California, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{ce803ae663696a6a70632711958439ca}
+      \strng{fullhash}{c73a1f6a86d77cac2a6dd2fd0ab8064b}
+      \strng{fullhashraw}{c73a1f6a86d77cac2a6dd2fd0ab8064b}
+      \strng{bibnamehash}{ce803ae663696a6a70632711958439ca}
+      \strng{authorbibnamehash}{ce803ae663696a6a70632711958439ca}
+      \strng{authornamehash}{ce803ae663696a6a70632711958439ca}
+      \strng{authorfullhash}{c73a1f6a86d77cac2a6dd2fd0ab8064b}
+      \strng{authorfullhashraw}{c73a1f6a86d77cac2a6dd2fd0ab8064b}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There is increasing awareness in the Recommender Systems field that diversity is a key property that enhances the usefulness of recommendations. Genre information can serve as a means to measure and enhance the diversity of recommendations and is readily available in domains such as movies, music or books. In this work we propose a new Binomial framework for defining genre diversity in recommender systems that takes into account three key properties: genre coverage, genre redundancy and recommendation list size-awareness. We show that methods previously proposed for measuring and enhancing recommendation diversity - including those adapted from search result diversification - fail to address adequately these three properties. We also propose an efficient greedy optimization technique to optimize Binomial diversity. Experiments with the Netflix dataset show the properties of our framework and comparison with state of the art methods.}
+      \field{booktitle}{Proceedings of the 8th ACM Conference on Recommender Systems}
+      \field{isbn}{9781450326681}
+      \field{series}{RecSys '14}
+      \field{title}{Coverage, redundancy and size-awareness in genre diversity for recommender systems}
+      \field{year}{2014}
+      \field{pages}{209\bibrangedash 216}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/2645710.2645743
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2645710.2645743
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2645710.2645743
+      \endverb
+      \keyw{recommender systems,genres,diversity}
     \endentry
     \entry{vovsha}{article}{}{}
       \name{author}{1}{}{%
@@ -481,6 +891,139 @@
       \field{year}{1977}
       \field{pages}{285\bibrangedash 344}
       \range{pages}{60}
+    \endentry
+    \entry{zhao2024}{misc}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=14bda8efddb7bb804be0ca9441a6ba54}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yuying},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b2eccb185095fccfeb40fdffd8b2105f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4638bc25df265c25b0e45aeab112fe66}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yunchao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48dc8864d7a369badfb5b1b7dab6f4fa}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Xueqi},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d21646a18174eae99dcae32060cefefc}{%
+           family={Aggarwal},
+           familyi={A\bibinitperiod},
+           given={Charu},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd38dfae13f0f10f11e4939a1794d7c8}{%
+           family={Derr},
+           familyi={D\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c8680496b4c6989954e45dba6201c68}
+      \strng{fullhash}{c327354535477d90803fee1463887afd}
+      \strng{fullhashraw}{c327354535477d90803fee1463887afd}
+      \strng{bibnamehash}{2c8680496b4c6989954e45dba6201c68}
+      \strng{authorbibnamehash}{2c8680496b4c6989954e45dba6201c68}
+      \strng{authornamehash}{2c8680496b4c6989954e45dba6201c68}
+      \strng{authorfullhash}{c327354535477d90803fee1463887afd}
+      \strng{authorfullhashraw}{c327354535477d90803fee1463887afd}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.IR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Fairness and Diversity in Recommender Systems: A Survey}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2307.04644
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2307.04644
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2307.04644
+      \endverb
+    \endentry
+    \entry{10.1145/1060745.1060754}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dcbcdf51dad1917e55004e62d9af7702}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Cai-Nicolas},
+           giveni={C\bibinithyphendelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=717fe79c6e213f5c8d636b6e8638ed35}{%
+           family={McNee},
+           familyi={M\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d9331f432435b9538e5760a6e33696c}{%
+           family={Konstan},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3219839db4fe80ba4ba35fa6aae531b6}{%
+           family={Lausen},
+           familyi={L\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Chiba, Japan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{fullhash}{0e01863175537164b1a73d192a19a1d3}
+      \strng{fullhashraw}{0e01863175537164b1a73d192a19a1d3}
+      \strng{bibnamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authorbibnamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authornamehash}{563474f84540139af2b0e175bcc0ec10}
+      \strng{authorfullhash}{0e01863175537164b1a73d192a19a1d3}
+      \strng{authorfullhashraw}{0e01863175537164b1a73d192a19a1d3}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work we present topic diversification, a novel method designed to balance and diversify personalized recommendation lists in order to reflect the user's complete spectrum of interests. Though being detrimental to average accuracy, we show that our method improves user satisfaction with recommendation lists, in particular for lists generated using the common item-based collaborative filtering algorithm.Our work builds upon prior research on recommender systems, looking at properties of recommendation lists as entities in their own right rather than specifically focusing on the accuracy of individual recommendations. We introduce the intra-list similarity metric to assess the topical diversity of recommendation lists and the topic diversification approach for decreasing the intra-list similarity. We evaluate our method using book recommendation data, including offline analysis on 361, !, 349 ratings and an online study involving more than 2, !, 100 subjects.}
+      \field{booktitle}{Proceedings of the 14th International Conference on World Wide Web}
+      \field{isbn}{1595930469}
+      \field{series}{WWW '05}
+      \field{title}{Improving recommendation lists through topic diversification}
+      \field{year}{2005}
+      \field{pages}{22\bibrangedash 32}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/1060745.1060754
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1060745.1060754
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1060745.1060754
+      \endverb
+      \keyw{accuracy,collaborative filtering,diversification,metrics,recommender systems}
     \endentry
   \enddatalist
 \endrefsection

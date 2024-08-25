@@ -2374,21 +2374,32 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">mcfadden1977</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">mcfadden1972</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">williams1977</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">hensher2002</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">rusmevichientong2009</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">rusmevichientong2009</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">gallego2014</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">davis2014</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">mcfadden1977</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">zhao2024</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">DBLP:journals/corr/abs-1907-13286</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">mcfadden1972</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">williams1977</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">hensher2002</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">rusmevichientong2009</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">rusmevichientong2009</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">gallego2014</bcf:citekey>
     <bcf:citekey order="10" intorder="1">davis2014</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">borsch1990</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">heiss</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">garey1990</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">hausman1978</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">train</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">vovsha</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">1574231873785747328</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">5731f882-9c11-372e-a87e-2f3238e61d42</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">mcfadden1977</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">davis2014</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">borsch1990</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">heiss</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">garey1990</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">hausman1978</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">train</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">zhao2024</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">10.1145/1060745.1060754</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">10.1145/2645710.2645743</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">10.1145/2645710.2645743</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">10.1145/1772690.1772780</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">10.1007/3-540-44593-5_25</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">10.1145/2365952.2365962</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">vovsha</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

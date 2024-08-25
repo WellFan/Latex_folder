@@ -70,8 +70,11 @@ The random utility model has long been a cornerstone in recommendation systems, 
 
 The NL model is specifically designed to address scenarios where correlations among products are prevalent. Its distinguishing feature lies in its capability to handle dependencies among products by clustering them, thereby making the correlations more apparent and consequently enhancing the effectiveness of recommendation systems.
 
+The other benefit of NL model is about fairness and diversity. In \textcite{zhao2024}, the conventional recommendation system tends to over-recommend popular items, while unpopular items are under-represented. This is called popularity bias (\textcite{DBLP:journals/corr/abs-1907-13286}) and it may lead to several problems. For example, small buisness is harder to grow even if it has similar quality as the popular and bigger one. Moreover, these small buisness may drop out from the market, imply the monopolization of the market.
 \section{Related Literature}
-Based on discrete choice model and random utility theory, \textcite{mcfadden1972} proposed the MNL model which depicits the consumers's behavior of choosing among multiple products. An extension of the MNL model is the NL model proposed by \textcite{williams1977}. The NL model is designed to handle the hierachical structure of the choice set, which is common in the real world. The NL model has been widely applied in various fields, such as transportation, marketing, and economics. For example, \textcite{hensher2002} studies the estimation of NL model using data of travellers choosing different transportation modes. Another usecase is the study of assortments optimization probelm in pricing and expected revenue maximization. \textcite{rusmevichientong2009} study that given the price of each product, how to choose the optimal assortment to maximize the expected revenue with the space constraint. The space constarin means that the number of products that can be displayed is limited and each product has a different size. Though this problem is NP-complete, they provide a polynomial time approximation acheme to solve this problem. Following \textcite{rusmevichientong2009}, \textcite{gallego2014} study the assortment optimization problem with different space constraint which limited the space of product in \textbf{each} category. Moreover, \textcite{davis2014} finds out that the complexity and worst-case performance in the assortment optimization problem differs in model settings. The settings are 1. the range of dissimilarity parameter 2. whether consumer may leave after selecting a nest. \footnote{The dissimilarity parameter will be discussed in section 3.4}
+From conventional choice and behavior models, \textcite{mcfadden1972} proposed the MNL model which depicits the consumers's behavior of choosing among multiple products. An extension of the MNL model is the NL model proposed by \textcite{williams1977}. The NL model is designed to handle the hierachical structure of the choice set, which is common in the real world. The NL model has been widely applied in various fields, such as transportation, marketing, and economics. For example, \textcite{hensher2002} studies the estimation of NL model using data of travellers choosing different transportation modes. Another usecase is the study of assortments optimization probelm in pricing and expected revenue maximization. \textcite{rusmevichientong2009} study that given the price of each product, how to choose the optimal assortment to maximize the expected revenue with the space constraint. The space constarin means that the number of products that can be displayed is limited and each product has a different size. Though this problem is NP-complete, they provide a polynomial time approximation acheme to solve this problem. Following \textcite{rusmevichientong2009}, \textcite{gallego2014} study the assortment optimization problem with different space constraint which limited the space of product in \textbf{each} category. Moreover, \textcite{davis2014} finds out that the complexity and worst-case performance in the assortment optimization problem differs in model settings. The settings are 1. the range of dissimilarity parameter 2. whether consumer may leave after selecting a nest. \footnote{The dissimilarity parameter will be discussed in section 3.4}
+
+From the aspect of machine learning and deep learning, recommendation systems are widely used in internet document serch, personalized advertisements, and online shopping platform. The first recommendation system was metioned by \textcite{1574231873785747328} for algorithm searching amongst textual document. \textcite{5731f882-9c11-372e-a87e-2f3238e61d42} uses decision tree model to generate marketing rules that match customer demographics to product categories. The common flow of recommendation systems is 1. Using the availible user data to create user embedding 2. compute the item embedding 3. use the dot product of user embedding and item embedding to get the relevence score between user-item pair 4. ranking the items from hightest to lowest accroding to the relevence score and select top K items to form a recommendation list 5. optional use re-ranking model to select top $\mathrm{K}_2$ items among the top K items. 
 
 \section{Fundamental Concepts}
 \subsection{Random Utility Model}
@@ -253,15 +256,15 @@ Therefore, we can rewrite the optimization problem as follows:
     \text{Objective funtion:} &\qquad \min_{\matr{S}} P(y=(0,0)) \nonumber \\
     &= \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}}
 \end{align}
-The optimal solution $\matr{S}^*$ is:
+The optimal solution $\matr{S}^{\ast}$ is:
 \begin{align}\label{optimal}
-    \matr{S}^* &= \arg\min_{\matr{S}} P(y=(0,0)) = \arg\min_{\matr{S}} \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}} \nonumber \\
+    \matr{S}^{\ast} &= \arg\min_{\matr{S}} P(y=(0,0)) = \arg\min_{\matr{S}} \frac{1}{1+\sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}} \nonumber \\
     &= \arg\max_{\matr{S}} \sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}.
 \end{align}
 
 Since the components of the exponent utility vector $\matr{h_m}$ are all positive, combined with the fact that the components of the exposure vector $\matr{s_m}$ are all binary, the optimal solution should be for the all-knowing consumer to be exposed to all ads to achieve the maximum probability of the consumer clicking on any ad.
 \begin{equation}
-    \matr{S^*_{i,j}} = 1, \quad \forall i \in \{1,2,...,M\}, j \in \{1,2,...,N\}.
+    \matr{S^{\ast}_{i,j}} = 1, \quad \forall i \in \{1,2,...,M\}, j \in \{1,2,...,N\}.
 \end{equation}
 
 \subsection{Case 2: Limited Exposure in each Nest}
@@ -274,7 +277,7 @@ Case 2 is case 1 with the exposure consraint. The problem can be written as:
 Case 1 implies that the inner solution (i.e., $\sum_{n=1}^{N}\matr{s_{m,n}} < K$) can never be optimal. Hence, we focus specifically on the bounded solution. The optimal solution is rather simple as well.
 Without loss of generality, we can reorder the components of $\matr{H}$ such that $\matr{H_{m,1}} \geq \matr{H_{m,2}} \geq ... \geq \matr{H_{m,N}}, \quad \forall m \in \{1,2,...,M\}$. The optimal solution is:
 \begin{equation}
-    \matr{S^*_{m,n}} = 
+    \matr{S^{\ast}_{m,n}} = 
     \begin{cases}
         1, & \text{if n $\leq$ K} \\
         0, & \text{otherwise}.
@@ -343,44 +346,44 @@ The constraint can be written as $\sum_{m=1}^{M}\matr{s_m}^T\matr{s_m} \leq K,$ 
 \begin{proof}
     Refer to \textcite{garey1990}.
 \end{proof}
-Nonetheless, in our setting, the optimal solution $\matr{S}^*$ is P problem.
+Nonetheless, in our setting, the optimal solution $\matr{S}^{\ast}$ is P problem.
 
 In the first step, sort the components of each row of $\matr{H}$ in descending order i.e., $\matr{H_{m,1}} \geq \matr{H_{m,2}} \geq ... \geq \matr{H_{m,N}}, \quad \forall m \in \{1,2,...,M\}$. To proceed further, we need the following lemma.
 \begin{lemma}[Monotonicity of Choice]\label{lemma1}
-    $\matr{S^*}$ is the optimal solution. If $\matr{S^*_{i,j}} = 1$, then
+    $\matr{S^{\ast}}$ is the optimal solution. If $\matr{S^{\ast}_{i,j}} = 1$, then
     \begin{equation*}
-        \matr{S^*_{i,j-1}} = 1
+        \matr{S^{\ast}_{i,j-1}} = 1
     \end{equation*}
 \end{lemma}
 
 \begin{proof}
-    The proof is by contradiction. Suppose $\matr{S^*_{i,j-1}} = 0$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 0$ and $\matr{S'_{i,j-1}} = 1$. Since the objective function is the same as case 1, we can rewrite the objective function as 
+    The proof is by contradiction. Suppose $\matr{S^{\ast}_{i,j-1}} = 0$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 0$ and $\matr{S'_{i,j-1}} = 1$. Since the objective function is the same as case 1, we can rewrite the objective function as 
     \begin{equation}
         \text{Alternative Objective funtion:} \qquad \max_{\matr{S}} \sum_{m=1}^{M}(\matr{h_m}^T \matr{s_m})^{\tau_m}.
     \end{equation}
-    The difference between alternative value functions achieved by $\matr{S'}$ and $\matr{S^*}$ is:
+    The difference between alternative value functions achieved by $\matr{S'}$ and $\matr{S^{\ast}}$ is:
     \begin{equation*}
     \begin{aligned}
-        &\quad \sum_{m=1}^{M}(\matr{h_m}^T \matr{s'_m})^{\tau_m} - \sum_{m=1}^{M}(\matr{h_m}^T \matr{s^*_m})^{\tau_m} \\
-        &= (\matr{h_i}^T \matr{s'_i})^{\tau_i} - (\matr{h_i}^T \matr{s^*_i})^{\tau_i} \\
-        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S'_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j}})^{\tau_i}\\
-        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^*_{i,n}}+\matr{H_{i,j}})^{\tau_i}> 0.
+        &\quad \sum_{m=1}^{M}(\matr{h_m}^T \matr{s'_m})^{\tau_m} - \sum_{m=1}^{M}(\matr{h_m}^T \matr{s^{\ast}_m})^{\tau_m} \\
+        &= (\matr{h_i}^T \matr{s'_i})^{\tau_i} - (\matr{h_i}^T \matr{s^{\ast}_i})^{\tau_i} \\
+        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S'_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^{\ast}_{i,n}}+\matr{H_{i,j}})^{\tau_i}\\
+        &= (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^{\ast}_{i,n}}+\matr{H_{i,j-1}})^{\tau_i} - (\sum\limits_{n \neq j, n \neq j-1}^{N} \matr{H_{i,n}} \matr{S^{\ast}_{i,n}}+\matr{H_{i,j}})^{\tau_i}> 0.
     \end{aligned}
     \end{equation*}
-    Therefore, the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^*}$, which contradicts the assumption that $\matr{S^*}$ is the optimal solution.
+    Therefore, the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^{\ast}}$, which contradicts the assumption that $\matr{S^{\ast}}$ is the optimal solution.
 \end{proof}
 
 \begin{lemma}[Bounded Constraint]\label{lemma2}
-    Optimal solution $\matr{S^*}$ always satisfies the bounded constraint i.e.
+    Optimal solution $\matr{S^{\ast}}$ always satisfies the bounded constraint i.e.
     \begin{equation*}
-        \sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^*_{m,n}} = K.
+        \sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^{\ast}_{m,n}} = K.
     \end{equation*}
 \end{lemma}
 \begin{proof}
-    This is proof by contradiction. Suppose $\sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^*_{m,n}} < K$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 1$ where $\matr{S^*_{i,j}} = 0$. Using the alternative objective function in lemma \ref{lemma1}, we can show that the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^*}$, which contradicts the assumption that $\matr{S^*}$ is the optimal solution.
+    This is proof by contradiction. Suppose $\sum_{m=1}^{M}\sum_{n=1}^{N}\matr{S^{\ast}_{m,n}} < K$, then we can construct a new solution $\matr{S'}$ by setting $\matr{S'_{i,j}} = 1$ where $\matr{S^{\ast}_{i,j}} = 0$. Using the alternative objective function in lemma \ref{lemma1}, we can show that the alternative solution $\matr{S'}$ is better than the optimal solution $\matr{S^{\ast}}$, which contradicts the assumption that $\matr{S^{\ast}}$ is the optimal solution.
 \end{proof}
 
-By Lemma \ref{lemma1}, we can conclude that the optimal solution $\matr{S^*}$ is a matrix in which the components are all 1 on the left side and 0 on the right side. The number of 1's is exactly K, as proven by Lemma \ref{lemma2}. The last piece of the puzzle is to find the distribution of 1's in each row. To achieve this, we need to construct a new variable $\Delta_{i,j}$, which denotes the increment of the alternative objective function when $\matr{S_{i,j}}$ is changed from 0 to 1. By Lemma \ref{lemma1}, we only need to consider $\matr{S_{i,j}}$ when $\matr{S_{i,1}}, \matr{S_{i,2}}, ..., \matr{S_{i,j-1}}$ are all 1. Therefore, the formal definition of $\Delta_{i,j}$ is:
+By Lemma \ref{lemma1}, we can conclude that the optimal solution $\matr{S^{\ast}}$ is a matrix in which the components are all 1 on the left side and 0 on the right side. The number of 1's is exactly K, as proven by Lemma \ref{lemma2}. The last piece of the puzzle is to find the distribution of 1's in each row. To achieve this, we need to construct a new variable $\Delta_{i,j}$, which denotes the increment of the alternative objective function when $\matr{S_{i,j}}$ is changed from 0 to 1. By Lemma \ref{lemma1}, we only need to consider $\matr{S_{i,j}}$ when $\matr{S_{i,1}}, \matr{S_{i,2}}, ..., \matr{S_{i,j-1}}$ are all 1. Therefore, the formal definition of $\Delta_{i,j}$ is:
 \begin{definition}[Increment Variable]\label{increment}
     \begin{align*}
     \Delta_{i,j} = 
@@ -391,9 +394,9 @@ By Lemma \ref{lemma1}, we can conclude that the optimal solution $\matr{S^*}$ is
     \end{align*}
 \end{definition}
 
-Given that $\tau_m \leq 1, \forall m \in \{1,2,...,M\}$, the increment variable $\Delta_{i,j}$ is non-increasing in j. Therefore, the optimal solution $\matr{S^*}$ is determined by the first K largest increment variables. The optimal solution $\matr{S^*}$ is:
+Given that $\tau_m \leq 1, \forall m \in \{1,2,...,M\}$, the increment variable $\Delta_{i,j}$ is non-increasing in j. Therefore, the optimal solution $\matr{S^{\ast}}$ is determined by the first K largest increment variables. The optimal solution $\matr{S^{\ast}}$ is:
 \begin{align}
-    \matr{S^*_{i,j}} = 
+    \matr{S^{\ast}_{i,j}} = 
     \begin{cases}
         1, &\text{if $\Delta_{i,j}$ is one of the K largest increment variables},\\
         0, &\text{otherwise}.
@@ -406,10 +409,40 @@ The complete algorithm is as follows:
     \item Identify the nest structure of the model, the deterministic utility of ads, and the dissimilarity parameters $\tau_i$.\footnote{The nest structure can be identified by the domain knowledge. Besides, \textcite{hausman1978} proposed Hausman's specification test which is used to identify the worngly classified products. The deterministic utility and $\tau_i$ can be identified by the sequential estimation proposed by \textcite{train}.}
     \item Calculate the exponent utility matrix $\matr{H}$ and sort the components of each row in descending order.
     \item Calculate the increment variables $\Delta_{i,j}$.
-    \item Find the optimal solution $\matr{S^*}$ by selecting the first K largest increment variables across all $\Delta_{i,j}$.
+    \item Find the optimal solution $\matr{S^{\ast}}$ by selecting the first K largest increment variables across all $\Delta_{i,j}$.
 \end{enumerate}
 
 The time complexity of the algorithm is $O(MN)$, which is linear to the number of total ads. The algorithm is easy to implement and interpret. The results can be used in the recommendation system to maximize the probability of a consumer clicking on any ad.
+
+\section{Diversity and Fairness}
+According to \textcite{zhao2024}, the diversity and fairness are two different concepts with similiar goal. Fairness focuses on 
+\begin{enumerate}
+    \item Popularity Bias: the exposure of similar items should be fair,
+    \item Quality Discrepancy: the recommendation quality for different users/groups should be similar, and
+    \item Discriminator Performance: the recommendation result should not take account of sensitive attributes (e.g. gender or sexual orientation). 
+\end{enumerate}
+On the other hand, diversity are categorized into two types:
+\begin{enumerate}
+    \item Individual Diversity: the recommendation list should contain a variety of items, and
+    \item Aggregate Diversity: the recommendation list vary across different users/groups which means recommendation system is able to recommend less popular items to users. 
+\end{enumerate}
+
+There are two type of metric to measure the diversity and fairness. The first one is measuring the average distance of item embedding pairs within recommendation list i.e. Intra-List Diversity (ILD). \textcite{10.1145/1060745.1060754} start from a reverse aspect and propose Intra-List Similarity (ILS) and choose among items with least similarity. \textcite{10.1145/2645710.2645743} critisize the distance metric because of inconsistency. \textcite{10.1145/2645710.2645743} leverage the genre information and propose a novel metric called $\mathrm{BinomDiv(\matr{S})} = \mathrm{Coverage(\matr{S})}\times\mathrm{NonRed(\matr{S})}$. Coverage is the number of genres in the recommendation list and NonRed (i.e. non-redundancy) is the number of genres that are not repeated in the recommendation list. As for aggregate diversity, the most common metric are total number of unique items, Shanon entropy, and Gini index.
+\begin{definition}[Intra-List Diversity]
+    \begin{align*}
+        ILD(\matr{S}) = \frac{1}{|\matr{S}|(|\matr{S}|-1)}\sum_{\matr{S}_{i',j'}\neq 0}\sum_{\matr{S}_{i,j}\neq 0, (i,j)\neq(i',j')}d(i, j, i', j'), \\
+        \text{where $d(i, j, i', j')$ is the distance between item (i, j) and item (i', j').}
+    \end{align*}
+\end{definition}
+
+\begin{definition}[Shannon Entropy]
+    \begin{align*}
+        &H = -\sum_{i,j}^{N,M} freq(i,j) \log freq(i,j),\\
+        &\text{where freq(i,j) is the frequency of item (i,j) in the lists across users.}
+    \end{align*}
+\end{definition}
+
+To achieve diversity, re-ranking is a common approach for the recommendation system. Combine the relevence score with diversity score, the system re-rank the recommendation list. Adding an item one by one with greedy algorithm, it can easily find the suboptimal solution. Many researches adapt this method (\textcite{10.1145/1772690.1772780}, \textcite{10.1007/3-540-44593-5_25}).Likewise, learning-to-rank is another approach to achieve diversity by adding a regularization term to the loss function. There are one addtional approach utilizing fusion-based model to achieve diversity. Fusion-based model aggregate multiple recommendation scores to generate a list of recommendation. \textcite{10.1145/2365952.2365962} combines the scores by weighted sum, then use strength Pareto evolutionary algorithm to optimize the weights.
 
 \section{Conclusion}
 In this paper, we aim to maximize the opportunity for a representative consumer to click on any ads. We first discuss the all-knowing consumer case and show that the optimal solution is to expose the consumer to all ads. Then we discuss the limited exposure in each nest case and show that the optimal solution is to expose the consumer to the K highest exponent utility ads in each nest. We also discuss the substitute effect of ads and show that the probability of a consumer clicking on an ad decreases when another ad is exposed to the consumer. The magnitude of the substitute effect is larger when the old ad shares the same nest with the new ad. Finally, we discuss the limited exposure in total case and show that the optimal solution is to expose the consumer to the K highest increment variables across all ads. The optimal solution is determined by the first K largest increment variables. An algorithm is provided to find the optimal solution. The results can be used in the recommendation system to maximize the probability of a consumer clicking on any ad.
